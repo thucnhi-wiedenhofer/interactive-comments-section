@@ -1,0 +1,36 @@
+.card {
+  width: 728px;
+  min-height: 145px;
+  border-radius: 10px !important;
+  display: flex;
+  flex-direction: row !important;
+  padding: 30px;
+}
+
+.avatar img {
+  width: 40px;
+  height: auto;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-form textarea {
+  width: 504px;
+  min-height: 96px;
+  resize: none;
+  margin: 0 10px;
+  background-color: var(--Very-light-gray);
+}
+
+.comment-form button {
+  width: 104px;
+  height: 48px;
+  border-radius: 10px !important;
+  background-color: var(--Moderate-blue) !important;
+  color: var(--White);
+  text-transform: uppercase;
+  font-weight: 500;
+}
