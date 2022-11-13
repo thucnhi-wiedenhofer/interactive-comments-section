@@ -35,6 +35,9 @@ main {
   width: 1440px;
   height: 100vh;
   background-color: var(--Very-light-gray);
+}
+
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,4 +48,18 @@ p {
   color: var(--Grayish-Blue);
   font-size: 16px;
   font-weight: 400;
+}
+
+h2 {
+  color: var(--Dark-blue);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card {
+  border-radius: 10px !important;
+  border: none !important;
+  flex-direction: row !important;
+  padding: 30px;
+  margin-top: 30px;
 }

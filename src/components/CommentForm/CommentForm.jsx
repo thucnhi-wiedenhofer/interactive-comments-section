@@ -1,10 +1,10 @@
 import React from "react";
-import juliusomoAvatar from "./../images/avatars/image-juliusomo.webp";
+import juliusomoAvatar from "./../../images/avatars/image-juliusomo.webp";
 import "./commentForm.css";
 
-function CommentForm() {
+function CommentForm({ data }) {
   return (
-    <div className="card">
+    <div className="comment-form card">
       <span className="avatar">
         <img src={juliusomoAvatar} alt="Juliusomo avatar" />
       </span>
