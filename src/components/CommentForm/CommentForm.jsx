@@ -1,12 +1,11 @@
 import React from "react";
-import juliusomoAvatar from "./../../images/avatars/image-juliusomo.webp";
 import "./commentForm.css";
 
 function CommentForm({ data }) {
   return (
     <div className="comment-form card">
       <span className="avatar">
-        <img src={juliusomoAvatar} alt="Juliusomo avatar" />
+        <img src={data.currentUser.image.webp} alt="Juliusomo avatar" />
       </span>
       <form className="comment-form">
         <div className="form-group">

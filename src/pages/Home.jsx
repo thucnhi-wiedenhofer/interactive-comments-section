@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CommentForm from "../components/CommentForm/CommentForm";
-import CommentCard from "../components/CommentCard/CommentCard";
+import UserHome from "../components/UserHome/UserHome";
 
 function Home() {
   /*  data of Json file are fetched by axios   */
@@ -16,12 +15,7 @@ function Home() {
   return (
     <main>
       <div className="container">
-        <div className="comments-section">
-          {data.map((comments) => (
-            <CommentCard key={comments.id} data={comments} />
-          ))}
-        </div>
-        <CommentForm data={data} />
+        <UserHome data={data} />
       </div>
     </main>
   );
