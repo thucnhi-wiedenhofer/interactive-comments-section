@@ -1,0 +1,9 @@
+.reply {
+  width: 645px;
+  min-height: 167px;
+}
+
+.strong {
+  color: var(--Moderate-blue);
+  font-weight: 500;
+}

@@ -33,7 +33,6 @@ body {
 
 main {
   width: 1440px;
-  height: 100vh;
   background-color: var(--Very-light-gray);
 }
 
