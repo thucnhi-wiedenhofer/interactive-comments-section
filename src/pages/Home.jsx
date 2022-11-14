@@ -15,7 +15,9 @@ function Home() {
   return (
     <main>
       <div className="container">
-        <UserHome data={data} />
+        {data.map((users, index) => (
+          <UserHome key={index} user={users} />
+        ))}
       </div>
     </main>
   );
