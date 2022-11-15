@@ -1,9 +1,33 @@
 .reply {
-  width: 645px;
-  min-height: 167px;
+  max-width: 645px !important;
+}
+
+.divider {
+  display: flex;
+  width: 84px;
+  height: 170px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0px 40px;
+  color: var(--Grayish-Blue);
+}
+
+.vr {
+  width: 2px !important;
+  opacity: 0.1 !important;
 }
 
 .strong {
   color: var(--Moderate-blue);
+  font-weight: 500;
+}
+
+.you {
+  background-color: var(--Moderate-blue);
+  color: var(--White);
+  padding: 2px 8px;
+  margin-right: 10px;
+  font-size: 12px;
   font-weight: 500;
 }

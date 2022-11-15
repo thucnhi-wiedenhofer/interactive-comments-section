@@ -1,4 +1,5 @@
 import React from "react";
+import "./userHome.css";
 import CommentCard from "../CommentCard/CommentCard";
 import CommentForm from "../CommentForm/CommentForm";
 
@@ -9,9 +10,8 @@ function UserHome({ user }) {
         {user.comments.map((comment, index) => (
           <CommentCard key={index} comment={comment} />
         ))}
+        <CommentForm user={user} />
       </div>
-
-      <CommentForm user={user} />
     </>
   );
 }

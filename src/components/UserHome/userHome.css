@@ -1,0 +1,9 @@
+.comments-section {
+  max-width: 730px;
+}
+
+@media (max-width: 375px) {
+  .comments-section {
+    max-width: 340px;
+  }
+}

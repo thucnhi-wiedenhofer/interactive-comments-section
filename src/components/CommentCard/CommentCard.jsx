@@ -28,7 +28,7 @@ function CommentCard({ comment }) {
             </div>
             <span className="reply-btn">
               <img src={replyIcon} alt="reply icon" />
-              reply
+              Reply
             </span>
           </div>
 
@@ -37,9 +37,11 @@ function CommentCard({ comment }) {
           </div>
         </div>
       </div>
-      {comment.replies.map((reply, index) => (
-        <ReplyCard key={index} reply={reply} />
-      ))}
+      <div className="replies-section">
+        {comment.replies.map((reply, index) => (
+          <ReplyCard key={index} reply={reply} />
+        ))}
+      </div>
     </>
   );
 }

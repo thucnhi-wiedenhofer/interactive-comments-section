@@ -14,6 +14,7 @@
   resize: none;
   margin: 0 10px;
   background-color: var(--Very-light-gray);
+  cursor: pointer;
 }
 
 .comment-form button {
@@ -24,4 +25,18 @@
   color: var(--White);
   text-transform: uppercase;
   font-weight: 500;
+}
+
+@media (max-width: 375px) {
+  .comment-form {
+    width: 100%;
+  }
+
+  .comment-form textarea:first-child {
+    width: 307px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
 }
