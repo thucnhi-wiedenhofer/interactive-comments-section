@@ -31,3 +31,26 @@
   font-size: 12px;
   font-weight: 500;
 }
+
+@media (max-width: 375px) {
+  .divider {
+    width: 16px;
+    height: 280px;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .reply {
+    max-width: 324px !important;
+  }
+
+  .reply .right {
+    position: absolute;
+    left: 159px;
+  }
+
+  .reply .reply-btn {
+    position: absolute;
+    left: 242px;
+  }
+}

@@ -1,11 +1,12 @@
 import React from "react";
-import "./commentForm.css";
+import "./replyToReplyForm.css";
+import juliusomoImg from "./../../images/avatars/image-juliusomo.webp";
 
-function CommentForm({ user }) {
+function ReplyToReplyForm() {
   return (
     <div className="comment-form card">
       <span className="avatar">
-        <img src={user.currentUser.image.webp} alt="Juliusomo avatar" />
+        <img src={juliusomoImg} alt="Juliusomo avatar" />
       </span>
       <form className="comment-form">
         <div className="form-group">
@@ -18,10 +19,10 @@ function CommentForm({ user }) {
         </div>
       </form>
       <button type="submit" className="btn">
-        Send
+        Reply
       </button>
     </div>
   );
 }
 
-export default CommentForm;
+export default ReplyToReplyForm;

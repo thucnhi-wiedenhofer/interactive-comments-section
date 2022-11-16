@@ -2,6 +2,9 @@ import React from "react";
 import "./userHome.css";
 import CommentCard from "../CommentCard/CommentCard";
 import CommentForm from "../CommentForm/CommentForm";
+import Modal from "../Modal/Modal";
+import ReplyToReplyForm from "../ReplyToReplyForm/ReplyToReplyForm";
+import ReplyToCommentForm from "../ReplyToCommentForm/ReplyToCommentForm";
 
 function UserHome({ user }) {
   return (
@@ -11,6 +14,9 @@ function UserHome({ user }) {
           <CommentCard key={index} comment={comment} />
         ))}
         <CommentForm user={user} />
+        <Modal />
+        <ReplyToReplyForm />
+        <ReplyToCommentForm />
       </div>
     </>
   );
