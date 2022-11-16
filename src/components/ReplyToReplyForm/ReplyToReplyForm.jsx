@@ -4,11 +4,11 @@ import juliusomoImg from "./../../images/avatars/image-juliusomo.webp";
 
 function ReplyToReplyForm() {
   return (
-    <div className="comment-form card">
+    <div className="reply-form card">
       <span className="avatar">
         <img src={juliusomoImg} alt="Juliusomo avatar" />
       </span>
-      <form className="comment-form">
+      <form className="reply-form">
         <div className="form-group">
           <textarea
             className="form-control"

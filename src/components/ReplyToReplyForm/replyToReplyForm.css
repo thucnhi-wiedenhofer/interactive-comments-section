@@ -1,0 +1,38 @@
+.reply-form {
+  display: flex;
+  flex-direction: row;
+  max-width: 645px;
+}
+
+.reply-form textarea {
+  width: 416px;
+  min-height: 96px;
+  resize: none;
+  margin: 0 10px;
+  background-color: var(--Very-light-gray);
+  cursor: pointer;
+}
+
+.reply-form button {
+  width: 104px;
+  height: 48px;
+  border-radius: 10px !important;
+  background-color: var(--Moderate-blue) !important;
+  color: var(--White);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@media (max-width: 375px) {
+  .reply-form {
+    max-width: 324px !important;
+    align-items: center;
+    justify-content: space-between;
+    height: auto !important;
+  }
+
+  .reply-form textarea {
+    max-width: 285px;
+    margin: 0;
+  }
+}
