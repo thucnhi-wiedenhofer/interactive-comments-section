@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./replyCard.css";
 import replyIcon from "./../../images/icon-reply.svg";
 import minusIcon from "./../../images/icon-minus.svg";
@@ -7,6 +7,8 @@ import deleteIcon from "./../../images/icon-delete.svg";
 import editIcon from "./../../images/icon-edit.svg";
 
 function ReplyCard({ reply }) {
+  const [replyScore, setReplyScore] = useState(reply.score);
+
   return (
     <>
       <div className="divider">
@@ -14,9 +16,17 @@ function ReplyCard({ reply }) {
       </div>
       <div className="reply card">
         <div className="score">
-          <img src={plusIcon} alt="plus icon" />
+          <img
+            src={plusIcon}
+            alt="plus icon"
+            onClick={() => setReplyScore(replyScore + 1)}
+          />
           <span>{reply.score}</span>
-          <img src={minusIcon} alt="minus icon" />
+          <img
+            src={minusIcon}
+            alt="minus icon"
+            onClick={() => setReplyScore(replyScore - 1)}
+          />
         </div>
 
         <div className="card-content">

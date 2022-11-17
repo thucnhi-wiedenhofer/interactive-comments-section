@@ -62,6 +62,11 @@ h2 {
   font-weight: 500;
 }
 
+button:hover {
+  opacity: 0.5 !important;
+  color: var(--White) !important;
+}
+
 .card {
   border-radius: 10px !important;
   border: none !important;
@@ -87,6 +92,11 @@ h2 {
 
 .score img {
   color: var(--Light-grayish-blue);
+  cursor: pointer;
+}
+
+.score img:hover {
+  color: var(--Moderate-blue);
 }
 
 .card-content {
@@ -130,6 +140,12 @@ h2 {
   color: var(--Moderate-blue);
   font-weight: 500;
   cursor: pointer;
+}
+
+.reply-btn:hover,
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.5 !important;
 }
 
 .right img {

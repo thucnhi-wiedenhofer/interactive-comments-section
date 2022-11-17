@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./commentCard.css";
 import replyIcon from "./../../images/icon-reply.svg";
 import minusIcon from "./../../images/icon-minus.svg";
@@ -6,13 +6,22 @@ import plusIcon from "./../../images/icon-plus.svg";
 import ReplyCard from "../ReplyCard/ReplyCard";
 
 function CommentCard({ comment }) {
+  const [score, setScore] = useState(comment.score);
   return (
     <>
       <div className="comment card">
         <div className="score">
-          <img src={plusIcon} alt="plus icon" />
-          <span>{comment.score}</span>
-          <img src={minusIcon} alt="minus icon" />
+          <img
+            src={plusIcon}
+            alt="plus icon"
+            onClick={() => setScore(score + 1)}
+          />
+          <span>{score}</span>
+          <img
+            src={minusIcon}
+            alt="minus icon"
+            onClick={() => setScore(score - 1)}
+          />
         </div>
 
         <div className="card-content">
