@@ -62,9 +62,29 @@ h2 {
   font-weight: 500;
 }
 
+.comment-form button,
+.reply-form button {
+  width: 104px;
+  height: 48px;
+  border-radius: 10px !important;
+  background-color: var(--Moderate-blue) !important;
+  color: var(--White);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 button:hover {
   opacity: 0.5 !important;
   color: var(--White) !important;
+}
+
+textarea {
+  width: 504px !important;
+  min-height: 96px !important;
+  resize: none !important;
+  margin: 0 20px !important;
+  background-color: var(--Very-light-gray) !important;
+  cursor: pointer;
 }
 
 .card {
@@ -210,5 +230,11 @@ button:hover {
 
   .card-text {
     height: 140px;
+  }
+
+  .comment-form button,
+  .reply-form button {
+    margin-top: 20px;
+    justify-items: end;
   }
 }

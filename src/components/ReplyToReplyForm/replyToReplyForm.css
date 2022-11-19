@@ -8,19 +8,12 @@
   width: 416px;
   min-height: 96px;
   resize: none;
-  margin: 0 10px;
   background-color: var(--Very-light-gray);
   cursor: pointer;
 }
 
-.reply-form button {
-  width: 104px;
-  height: 48px;
-  border-radius: 10px !important;
-  background-color: var(--Moderate-blue) !important;
-  color: var(--White);
-  text-transform: uppercase;
-  font-weight: 500;
+#response {
+  margin-left: 0px;
 }
 
 @media (max-width: 375px) {

@@ -11,8 +11,8 @@ function ReplyToCommentForm() {
       <form className="comment-form">
         <div className="form-group">
           <textarea
+            id="response"
             className="form-control"
-            id=""
             placeholder="Add a comment..."
             rows="3"
           ></textarea>

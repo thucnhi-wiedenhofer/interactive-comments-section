@@ -3,6 +3,7 @@ import "./userHome.css";
 import CommentCard from "../CommentCard/CommentCard";
 import CommentForm from "../CommentForm/CommentForm";
 import Modal from "../Modal/Modal";
+
 function UserHome({ user }) {
   return (
     <>

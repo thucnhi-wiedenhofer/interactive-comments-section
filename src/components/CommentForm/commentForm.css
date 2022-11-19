@@ -6,15 +6,7 @@
 .comment-form {
   display: flex;
   flex-direction: row;
-}
-
-.comment-form textarea {
-  width: 504px;
-  min-height: 96px;
-  resize: none;
-  margin: 0 10px;
-  background-color: var(--Very-light-gray);
-  cursor: pointer;
+  justify-content: space-between;
 }
 
 .comment-form button {
@@ -33,6 +25,7 @@
     align-items: center;
     justify-content: space-between;
     height: auto !important;
+    flex-wrap: wrap;
   }
 
   .avatar img:nth-child(1) {
@@ -52,7 +45,6 @@
 
   button:nth-child(3) {
     order: 3;
-    margin-top: 20px;
     justify-content: flex-end;
   }
 

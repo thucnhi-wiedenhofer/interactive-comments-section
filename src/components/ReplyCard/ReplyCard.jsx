@@ -7,7 +7,8 @@ import deleteIcon from "./../../images/icon-delete.svg";
 import editIcon from "./../../images/icon-edit.svg";
 
 function ReplyCard({ reply }) {
-  const [replyScore, setReplyScore] = useState(reply.score);
+  /* UseState to change score when user click + or -  */
+  const [score, setScore] = useState(reply.score);
 
   return (
     <>
@@ -19,13 +20,13 @@ function ReplyCard({ reply }) {
           <img
             src={plusIcon}
             alt="plus icon"
-            onClick={() => setReplyScore(replyScore + 1)}
+            onClick={() => setScore(score + 1)}
           />
-          <span>{reply.score}</span>
+          <span>{score}</span>
           <img
             src={minusIcon}
             alt="minus icon"
-            onClick={() => setReplyScore(replyScore - 1)}
+            onClick={() => setScore(score - 1)}
           />
         </div>
 
@@ -38,11 +39,13 @@ function ReplyCard({ reply }) {
                 alt="profile avatar"
               />
               <h2>{reply.user.username}</h2>
+              {/* display you if currentuser */}
               {reply.user.username === "juliusomo" && (
                 <div className="you">you</div>
               )}
               <p>{reply.createdAt}</p>
             </div>
+            {/* display delete and edit buttons if currentuser */}
             {reply.user.username === "juliusomo" ? (
               <>
                 <div className="right">
