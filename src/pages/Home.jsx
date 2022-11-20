@@ -1,23 +1,25 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import UserHome from "../components/UserHome/UserHome";
+import React from "react";
+import data from "../data.json";
+import "./home.css";
+import Modal from "./../components/Modal/Modal";
+import CommentCard from "../components/CommentCard/CommentCard";
+import CommentForm from "../components/CommentForm/CommentForm";
 
 function Home() {
-  /*  data of Json file are fetched by axios   */
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios
-      .get("data.json")
-      .then((response) => setData(response.data))
-      .catch((error) => console.log(error));
-  }, []);
+  // Put the object data into storage
+  localStorage.setItem("data", JSON.stringify(data));
+  const dataUser = JSON.parse(localStorage.getItem("data"));
 
   return (
     <main>
       <div className="container">
-        {data.map((users, index) => (
-          <UserHome key={index} user={users} />
-        ))}
+        <div className="comments-section">
+          {dataUser.comments.map((comment, index) => (
+            <CommentCard key={index} comment={comment} />
+          ))}
+          <CommentForm user={dataUser} />
+          <Modal />
+        </div>
       </div>
     </main>
   );
