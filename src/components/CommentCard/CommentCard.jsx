@@ -8,7 +8,7 @@ import plusIcon from "./../../images/icon-plus.svg";
 import deleteIcon from "./../../images/icon-delete.svg";
 import editIcon from "./../../images/icon-edit.svg";
 
-function CommentCard({ comment }) {
+function CommentCard({ comment, deletePost, edit }) {
   /* UseState to change score when user click + or -  */
   const [score, setScore] = useState(comment.score);
   return (
@@ -47,11 +47,14 @@ function CommentCard({ comment }) {
             {comment.user.username === "juliusomo" ? (
               <>
                 <div className="right">
-                  <span className="delete-btn">
+                  <span
+                    onClick={() => deletePost(comment.id)}
+                    className="delete-btn"
+                  >
                     <img src={deleteIcon} alt="delete icon" />
                     Delete
                   </span>
-                  <span className="edit-btn">
+                  <span onClick={() => edit(comment.id)} className="edit-btn">
                     <img src={editIcon} alt="edit icon" />
                     Edit
                   </span>

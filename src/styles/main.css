@@ -92,7 +92,7 @@ textarea {
   border: none !important;
   flex-direction: row !important;
   padding: 30px;
-  margin-top: 20px;
+  margin: 15px 0px;
 }
 
 .score {

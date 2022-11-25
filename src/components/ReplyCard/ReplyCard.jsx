@@ -12,9 +12,6 @@ function ReplyCard({ reply }) {
 
   return (
     <>
-      <div className="divider">
-        <div className="vr"></div>
-      </div>
       <div className="reply card">
         <div className="score">
           <img

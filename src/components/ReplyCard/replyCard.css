@@ -2,22 +2,6 @@
   max-width: 645px !important;
 }
 
-.divider {
-  display: flex;
-  width: 84px;
-  height: 170px;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 20px;
-  padding: 0px 40px;
-  color: var(--Grayish-Blue);
-}
-
-.vr {
-  width: 2px !important;
-  opacity: 0.1 !important;
-}
-
 .strong {
   color: var(--Moderate-blue);
   font-weight: 500;
@@ -33,13 +17,6 @@
 }
 
 @media (max-width: 375px) {
-  .divider {
-    width: 16px;
-    height: 280px;
-    padding: 0;
-    justify-content: flex-start;
-  }
-
   .reply {
     max-width: 324px !important;
   }
