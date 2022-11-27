@@ -24,7 +24,7 @@ function CommentForm() {
       },
     };
     comments.push(newComment);
-    localStorage.setItem("comments", JSON.stringify(comments));
+    localStorage.setItem("commentAdded", JSON.stringify(comments));
   };
 
   const post = (e) => {

@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CommentCard from "../CommentCard/CommentCard";
 
-function Comments({ comments }) {
+function Comments() {
+  // Fetching from localstorage data:
+  const dataUser = JSON.parse(localStorage.getItem("data"));
+  console.log(dataUser);
+  const [comments, setComments] = useState(dataUser.comments);
+  console.log(comments);
+  const getComments = JSON.parse(localStorage.getItem("commentAdded"));
+  console.log(getComments);
+  useEffect(() => {
+    if (getComments === null) {
+      setComments(comments);
+    } else {
+      setComments(getComments);
+    }
+  }, [comments, getComments]);
+
   //Delete Comment
   const deletePost = (id) => {
     // Fetching comments from localstorage data:

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import data from "../data.json";
 import "./home.css";
 import Modal from "./../components/Modal/Modal";
@@ -9,16 +9,15 @@ function Home() {
   // Put the object data into local storage
   localStorage.setItem("data", JSON.stringify(data));
 
-  // Fetching from localstorage data:
-  const dataUser = JSON.parse(localStorage.getItem("data"));
-  console.log(dataUser);
-
   return (
     <main>
       <div className="container">
         <div className="comments-section">
-          <Comments comments={dataUser.comments} />
+          {/* Displaying comments */}
+          <Comments />
+          {/* Displaying form to add new comments */}
           <CommentForm />
+          {/* Displaying modal when click on delete button */}
           <Modal />
         </div>
       </div>
